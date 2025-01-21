@@ -26,6 +26,10 @@ module.exports = {
           presets: ['@babel/preset-env']
         }
       }
+    },{
+      test: /\.css$/, // look for all files that end in .css
+      exclude: /node_modules|dist/, // except when it's in the node_modules or dist folder
+      use: ['style-loader','css-loader'] // order is important     
     }]
   }
 };
